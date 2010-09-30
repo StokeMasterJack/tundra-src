@@ -1,0 +1,347 @@
+<model year="2011" name="Tundra">
+<!--<model year="2011" name="Tundra 4x2" code="82">-->
+<!--<model year="2011" name="Tundra 4x4" code="83">-->
+    <features>
+        <trim>
+
+            <grade pick="1" derived="true">
+                <feature code="Base" includes="LayerPad1 LayerPad2" conflicts="Leather"/>
+                <feature code="LTD" name="Limited" includes="Leather Fog DS MG TO SO SAT Bucket Overhead HomeLink LayerPad1 LayerPad2" conflicts="Regular Fabric Vinyl"/>
+            </grade>
+
+            <cab pick="1" derived="true">
+                <feature code="Regular" name="Regular Cab" includes="" conflicts="Short LTD"/>
+                <feature code="Double" name="Double Cab" includes="" conflicts="Short"/>
+                <feature code="Crew" name="CrewMax" includes="Short" conflicts="Standard Long"/>
+            </cab>
+
+            <bed pick="1" derived="true">
+                <feature code="Short" name="Short Bed" includes="Crew" conflicts="Regular Double"/>
+                <feature code="Standard" name="Standard Bed" includes="" conflicts="Crew"/>
+                <feature code="Long" name="Long Bed" includes="" conflicts="Crew"/>
+            </bed>
+
+            <engine pick="1" derived="true">
+                <feature code="V6" name="4.0L 6-Cyl. Engine"/>
+                <feature code="V8" name="4.6L V8 Engine"/>
+                <feature code="V8Big" name="5.7L V8 Engine" includes="iForce"/>
+                <feature code="V8FFV" name="5.7L Flex Fuel V8 Engine" includes="iForce"/>
+            </engine>
+
+            <transmission pick="1" derived="true">
+                <feature code="5AT" name="5-Speed Auto" includes="" conflicts=""/>
+                <feature code="6AT" name="6-Speed Auto" includes="" conflicts=""/>
+            </transmission>
+
+            <drive pick="1" derived="true">
+                <feature code="2WD" name="4x2"/>
+                <feature code="4WD" name="4x4" includes="TowHooks"/>
+            </drive>
+
+            <!--<tailgate pick="1" derived="true">
+                <feature code="TGUP" name="Tailgate Up"/>
+                <feature code="TGDOWN" name="Tailgate Down"/>
+            </tailgate>-->
+
+            <modelCode pick="1">
+                <feature code="8202" iffs="Base Regular Standard V6 2WD 5AT" includes="" conflicts="" name="4x2 Regular Cab w/4.0-Liter V6 5-Spd. Auto"/>
+                <feature code="8204" iffs="Base Regular Long V6 2WD 5AT" includes="" conflicts="" name="4x2 Regular Cab Long Bed w/4.0-Liter V6 5-Spd. Auto"/>
+                <feature code="8222" iffs="Base Regular Standard V8 2WD 6AT" includes="TO" conflicts="" name="4x2 Regular Cab w/4.6-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8224" iffs="Base Regular Standard V8Big 2WD 6AT" includes="" conflicts="" name="4x2 Regular Cab w/5.7-Liter V8 6-Spd. Auto"/>-->
+                <!--<feature code="8226" iffs="Base Regular Long V8 2WD 6AT" includes="" conflicts="" name="4x2 Regular Cab Long Bed w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8228" iffs="Base Regular Long V8Big 2WD 6AT" includes="TO" conflicts="" name="4x2 Regular Cab Long Bed w/5.7-Liter V8 6-Spd. Auto"/>
+
+                <feature code="8215" iffs="Base Double Standard V6 2WD 5AT" includes="" conflicts="DS EC" name="4x2 Double Cab w/4.0-Liter V6 5-Spd. Auto"/>
+                <feature code="8239" iffs="Base Double Standard V8 2WD 6AT" includes="" conflicts="" name="4x2 Double Cab w/4.6-Liter V8 6-Spd. Auto"/>
+                <feature code="8241" iffs="Base Double Standard V8Big 2WD 6AT" includes="" conflicts="" name="4x2 Double Cab w/5.7-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8243" iffs="Base Double Long V8 2WD 6AT" includes="" conflicts="" name="4x2 Double Cab Long Bed w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8245" iffs="Base Double Long V8Big 2WD 6AT" includes="TO" conflicts="DS EC" name="4x2 Double Cab Long Bed w/5.7-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8250" iffs="LTD Double Standard V8 2WD 6AT" includes="" conflicts="" name="4x2 Double Cab Ltd w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8252" iffs="LTD Double Standard V8Big 2WD 6AT" includes="TO WX" conflicts="" name="4x2 Double Cab Ltd w/5.7-Liter V8 6-Spd. Auto"/>
+
+                <feature code="8259" iffs="Base Crew Short V8 2WD 6AT" includes="" conflicts="" name="4x2 CrewMax w/4.6-Liter V8 6-Spd. Auto"/>
+                <feature code="8261" iffs="Base Crew Short V8Big 2WD 6AT" includes="" conflicts="" name="4x2 CrewMax w/5.7-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8270" iffs="LTD Crew Short V8 2WD 6AT" includes="" conflicts="" name="4x2 CrewMax Ltd w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8272" iffs="LTD Crew Short V8Big 2WD 6AT" includes="TO" conflicts="" name="4x2 CrewMax Ltd w/5.7-Liter V8 6-Spd. Auto"/>
+
+
+                <!--<feature code="8322" iffs="Base Regular Standard V8 4WD 6AT" includes="" conflicts="" name="4x4 Regular Cab w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8323" iffs="Base Regular Standard V8FFV 4WD 6AT" includes="TO" conflicts="" name="4x4 Regular Cab w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+                <feature code="8324" iffs="Base Regular Standard V8Big 4WD 6AT" includes="TO" conflicts="" name="4x4 Regular Cab w/5.7-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8326" iffs="Base Regular Long V8 4WD 6AT" includes="" conflicts="" name="4x4 Regular Cab Long Bed w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8327" iffs="Base Regular Long V8FFV 4WD 6AT" includes="TO" conflicts="" name="4x4 Regular Cab Long Bed w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+                <feature code="8328" iffs="Base Regular Long V8Big 4WD 6AT" includes="TO" conflicts="" name="4x4 Regular Cab Long Bed w/5.7-Liter V8 6-Spd. Auto"/>
+
+                <feature code="8331" iffs="Base Double Standard V8FFV 4WD 6AT" includes="" conflicts="" name="4x4 Double Cab w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+                <feature code="8335" iffs="Base Double Long V8FFV 4WD 6AT" includes="TO" conflicts="DS EC" name="4x4 Double Cab Long Bed w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+                <feature code="8339" iffs="Base Double Standard V8 4WD 6AT" includes="" conflicts="" name="4x4 Double Cab w/4.6-Liter V8 6-Spd. Auto"/>
+                <feature code="8341" iffs="Base Double Standard V8Big 4WD 6AT" includes="" conflicts="" name="4x4 Double Cab w/5.7-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8343" iffs="Base Double Long V8 4WD 6AT" includes="" conflicts="" name="4x4 Double Cab Long Bed w/4.6-Liter V8 6-Spd. Auto"/>-->
+                <feature code="8345" iffs="Base Double Long V8Big 4WD 6AT" includes="TO" conflicts="DS EC" name="4x4 Double Cab Long Bed w/5.7-Liter V8 6-Spd. Auto"/>
+                <!--<feature code="8350" iffs="LTD Double Standard V8 4WD 6AT" includes="" conflicts="" name="4x2 Double Cab Ltd 4.6L V8 6-Spd. Auto"/>-->
+                <feature code="8352" iffs="LTD Double Standard V8Big 4WD 6AT" includes="TO WX" conflicts="" name="4x4 Double Cab Ltd w/5.7-Liter V8 6-Spd. Auto"/>
+                <feature code="8354" iffs="LTD Double Standard V8FFV 4WD 6AT" includes="TO WX" conflicts="" name="4x4 Double Cab Ltd w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+
+                <feature code="8359" iffs="Base Crew Short V8 4WD 6AT" includes="" conflicts="" name="4x4 CrewMax w/4.6-Liter V8 6-Spd. Auto"/>
+                <feature code="8361" iffs="Base Crew Short V8Big 4WD 6AT" includes="" conflicts="" name="4x4 CrewMax w/5.7-Liter V8 6-Spd. Auto"/>
+                <feature code="8363" iffs="Base Crew Short V8FFV 4WD 6AT" includes="" conflicts="" name="4x4 CrewMax w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+                <!--<feature code="8370" iffs="LTD Crew Short V8 4WD 6AT" includes="" conflicts="" name="4x4 CrewMax Limited 4.6L V8 6-Spd. Auto"/>-->
+                <feature code="8372" iffs="LTD Crew Short V8Big 4WD 6AT" includes="TO" conflicts="" name="4x4 CrewMax Ltd w/5.7-Liter V8 6-Spd. Auto"/>
+                <feature code="8374" iffs="LTD Crew Short V8FFV 4WD 6AT" includes="TO" conflicts="" name="4x4 CrewMax Ltd w/5.7-Liter V8 FFV 6-Spd. Auto"/>
+            </modelCode>
+
+            <!--<wheels pick="1" derived="true">
+                <feature code="17W" name="17-in. 6-spoke alloy wheels"/>
+                <feature code="19W" name="19-in. 5-spoke alloy wheels with silver accents"/>
+            </wheels>-->
+        </trim>
+        <color>
+            <exterior pick="1">
+                <feature code="040" name="Super White"/>
+                <feature code="1D6" name="Silver Sky Metallic" conflicts="Beige 44"/>
+                <feature code="1G3" name="Magnetic Gray Metallic" conflicts="Beige 44"/>
+                <feature code="202" name="Black"/>
+                <feature code="3L5" name="Radiant Red" includes="ColorPaint"/>
+                <feature code="3R3" name="Barcelona Red Metallic" includes="ColorPaint"/>
+                <feature code="4T3" name="Pyrite Mica" includes="ColorPaint"/>
+                <feature code="6V4" name="Spruce Mica" includes="ColorPaint"/>
+                <feature code="8S6" name="Nautical Blue Metallic" includes="ColorPaint"/>
+            </exterior>
+           <interior pick="1" derived="true">
+                <feature code="FQ13" iffs="Graphite Fabric Base Regular 13" conflicts="LTD Double Crew" name="Graphite Fabric - Regular"/>
+                <feature code="FQ20" iffs="Black Fabric Base Regular 20" conflicts="LTD Double Crew" name="Black Fabric - Regular"/>
+                <feature code="FQ44" iffs="Beige Fabric Base Regular 44" conflicts="LTD Double Crew 1D6 1G3" name="Sand Beige Fabric - Regular"/>
+                <feature code="LJ13" iffs="Graphite Vinyl Base Regular 13 Work" conflicts="LTD Double Crew" name="Graphite Vinyl - Regular"/>
+
+                <feature code="FH13" iffs="Graphite Fabric Base Double 13" conflicts="LTD Regular Crew" name="Graphite Fabric - Double"/>
+                <feature code="FH20" iffs="Black Fabric Base Double 20" conflicts="LTD Regular Crew" name="Black Fabric - Double"/>
+                <feature code="FH44" iffs="Beige Fabric Base Double 44" conflicts="LTD Regular Crew 1D6 1G3" name="Sand Beige Fabric - Double"/>
+                <feature code="LH13" iffs="Graphite Vinyl Base Double 13 Work" conflicts="LTD Regular Crew" name="Graphite Vinyl - Double"/>
+
+                <feature code="FL13" iffs="Graphite Fabric Base Crew 13" conflicts="LTD Regular Double" name="Graphite Fabric - CrewMax"/>
+                <feature code="FL20" iffs="Black Fabric Base Crew 20" conflicts="LTD Regular Double" name="Black Fabric - CrewMax"/>
+                <feature code="FL44" iffs="Beige Fabric Base Crew 44" conflicts="LTD Regular Double 1D6 1G3" name="Sand Beige Fabric - CrewMax"/>
+
+                <feature code="LD13" iffs="Graphite Leather LTD Double 13" conflicts="Base Regular Crew" name="Limited Graphite Leather - Double"/>
+                <feature code="LD21" iffs="Red Leather LTD Double 21" conflicts="Base Regular Crew 3L5 3R3" name="Limited Red Rock Leather - Double"/>
+                <feature code="LD44" iffs="Beige Leather LTD Double 44" conflicts="Base Regular Crew 1D6 1G3" name="Limited Sand Beige Leather - Double"/>
+
+                <feature code="LF13" iffs="Graphite Leather LTD Crew 13" conflicts="Base Regular Double" name="Limited Graphite Leather - CrewMax"/>
+                <feature code="LF21" iffs="Red Leather LTD Crew 21" conflicts="Base Regular Double 3L5 3R3" name="Limited Red Rock Leather - CrewMax"/>
+                <feature code="LF44" iffs="Beige Leather LTD Crew 44" conflicts="Base Regular Double 1D6 1G3" name="Limited Sand Beige Leather - CrewMax"/>
+                <feature code="LG20" iffs="Black Leather LTD Crew 20 PT" conflicts="Base Regular Double 040 3L5 4T3 6V4 8S6" name="Limited Black Leather Platinum - CrewMax"/>
+
+
+                <!--
+                <feature code="FM13" includes="Graphite Fabric Base Regular 13" conflicts="LTD Double Crew" name="Graphite Fabric - Regular"/>
+                <feature code="LJ13" includes="Graphite Vinyl Base Regular 13 Work" conflicts="LTD Double Crew" name="Graphite Vinyl - Regular"/>
+                <feature code="FQ13" includes="Graphite Fabric Base Regular 13 SL" conflicts="LTD Double Crew" name="Graphite Fabric SR5 Pkg - Regular"/>
+                <feature code="FQ20" includes="Black Fabric Base Regular 20 SL SportFabric" conflicts="LTD Double Crew" name="Black Fabric SR5 Pkg - Regular"/>
+                <feature code="FQ44" includes="Beige Fabric Base Regular 44 SL SportFabric" conflicts="LTD Double Crew 1D6 1G3" name="Sand Beige Fabric SR5 Pkg - Regular"/>
+                <feature code="FP13" includes="Graphite Fabric Base Regular Standard 13 SM SportFabric" conflicts="LTD Double Crew Long V6 1D6 3R3 4T3 6V4 8S6" name="Graphite Fabric SR5 CK Bumpers - Regular"/>
+
+                <feature code="FN13" includes="Graphite Fabric Base Regular Standard 13 OF SportFabric" conflicts="LTD Double Crew Long V6" name="Graphite Fabric Off Road Pkg - Regular"/>
+                <feature code="FN20" includes="Black Fabric Base Regular Standard 20 OF SportFabric" conflicts="LTD Double Crew Long V6" name="Black Fabric Off Road Pkg - Regular"/>
+                <feature code="FN44" includes="Beige Fabric Base Regular Standard 44 OF SportFabric" conflicts="LTD Double Crew Long V6 1D6 1G3" name="Sand Beige Fabric Off Road Pkg - Regular"/>
+
+                <feature code="FH13" includes="Graphite Fabric Base Double 13" conflicts="LTD Regular Crew" name="Graphite Fabric - Double"/>
+                <feature code="FH20" includes="Black Fabric Base Double 20" conflicts="LTD Regular Crew" name="Black Fabric - Double"/>
+                <feature code="FH44" includes="Beige Fabric Base Double 44" conflicts="LTD Regular Crew 1D6 1G3" name="Sand Beige Fabric - Double"/>
+                <feature code="LH13" includes="Graphite Vinyl Base Double 13 Work" conflicts="LTD Regular Crew" name="Graphite Vinyl - Double"/>
+                
+                <feature code="FR13" includes="Graphite Fabric Base Double Standard 13 OF SportFabric" conflicts="LTD Regular Crew Long V6" name="Graphite Fabric Off Road Pkg - Double"/>
+                <feature code="FR20" includes="Black Fabric Base Double Standard 20 OF SportFabric" conflicts="LTD Regular Crew Long V6" name="Black Fabric Off Road Pkg - Double"/>
+                <feature code="FR44" includes="Beige Fabric Base Double Standard 44 OF SportFabric" conflicts="LTD Regular Crew Long V6 1D6 1G3" name="Sand Beige Fabric Off Road Pkg - Double"/>
+                <feature code="FT13" includes="Graphite Fabric Base Double Standard 13 SP SportFabric" conflicts="LTD Regular Crew Long V6" name="Graphite Fabric SR5 Pkg - Double"/>
+                <feature code="FT20" includes="Black Fabric Base Double Standard 20 SP SportFabric" conflicts="LTD Regular Crew Long V6" name="Black Fabric SR5 Pkg - Double"/>
+                <feature code="FT44" includes="Beige Fabric Base Double Standard 44 SP SportFabric" conflicts="LTD Regular Crew Long V6 1D6 1G3" name="Sand Beige Fabric SR5 Pkg - Double"/>
+                <feature code="FS13" includes="Graphite Fabric Base Double Standard 13 SM SportFabric" conflicts="LTD Regular Crew Long V6 1D6 3R3 4T3 6V4 8S6" name="Graphite Fabric SR5 CK Bumpers - Double"/>
+
+                <feature code="FY20" includes="Black Fabric Base Double Standard 20 RD SportFabric" conflicts="LTD Regular Crew Long V6 040 1D6 1G3 3R3 4T3 6V4 8S6" name="Black Fabric TRD Sport Pkg - Double"/>
+
+                <feature code="FL13" includes="Graphite Fabric Base Crew Short 13" conflicts="LTD Regular Double" name="Graphite Fabric - CrewMax"/>
+                <feature code="FL20" includes="Black Fabric Base Crew Short 20" conflicts="LTD Regular Double" name="Black Fabric - CrewMax"/>
+                <feature code="FL44" includes="Beige Fabric Base Crew Short 44" conflicts="LTD Regular Double 1D6 1G3" name="Sand Beige Fabric - CrewMax"/>
+                <feature code="FU13" includes="Graphite Fabric Base Crew Short 13 OF SportFabric" conflicts="LTD Regular Double" name="Graphite Fabric Off Road Pkg - CrewMax"/>
+                <feature code="FU20" includes="Black Fabric Base Crew Short 20 OF SportFabric" conflicts="LTD Regular Double" name="Black Fabric Off Road Pkg - CrewMax"/>
+                <feature code="FU44" includes="Beige Fabric Base Crew Short 44 OF SportFabric" conflicts="LTD Regular Double 1D6 1G3" name="Sand Beige Fabric Off Road Pkg - CrewMax"/>
+                <feature code="FW13" includes="Graphite Fabric Base Crew Short 13 SP SportFabric" conflicts="LTD Regular Double" name="Graphite Fabric SR5 Pkg - CrewMax"/>
+                <feature code="FW20" includes="Black Fabric Base Crew Short 20 SP SportFabric" conflicts="LTD Regular Double" name="Black Fabric SR5 Pkg - CrewMax"/>
+                <feature code="FW44" includes="Beige Fabric Base Crew Short 44 SP SportFabric" conflicts="LTD Regular Double 1D6 1G3" name="Sand Beige Fabric SR5 Pkg - CrewMax"/>
+
+                <feature code="FA20" includes="Black Fabric Base Double Standard 4WD 20 RK SportFabric" conflicts="LTD Regular Crew Short Long V6 V8 2WD 1D6 3R3 4T3 6V4 8S6" name="Black Fabric TRD Rock Warrior - Double"/>
+                <feature code="FC20" includes="Black Fabric Base Crew Short 4WD 20 RK SportFabric" conflicts="LTD Regular Double Standard Long V6 V8 2WD 1D6 3R3 4T3 6V4 8S6" name="Black Fabric TRD Rock Warrior - CrewMax"/>
+
+                <feature code="LD13" includes="Graphite Leather LTD Double Standard 13" conflicts="Base Regular Crew Long" name="Limited Graphite Leather - Double"/>
+                <feature code="LD21" includes="Red Leather LTD Double Standard 21" conflicts="Base Regular Crew Long 3L5 3R3" name="Limited Red Rock Leather - Double"/>
+                <feature code="LD44" includes="Beige Leather LTD Double Standard 44" conflicts="Base Regular Crew Long 1D6 1G3" name="Limited Sand Beige Leather - Double"/>
+                <feature code="LC13" includes="Graphite Leather LTD Double Standard 13 OF" conflicts="Base Regular Crew Long" name="Limited Graphite Leather Off Road - Double"/>
+                <feature code="LC21" includes="Red Leather LTD Double Standard 21 OF" conflicts="Base Regular Crew Long 3L5 3R3" name="Limited Red Rock Leather Off Road - Double"/>
+                <feature code="LC44" includes="Beige Leather LTD Double Standard 44 OF" conflicts="Base Regular Crew Long 1D6 1G3" name="Limited Sand Beige Leather Off Road - Double"/>
+
+                <feature code="LF13" includes="Graphite Leather LTD Crew Short 13" conflicts="Base Regular Double Standard Long" name="Limited Graphite Leather - CrewMax"/>
+                <feature code="LF21" includes="Red Leather LTD Crew Short 21" conflicts="Base Regular Double Standard Long 3L5 3R3" name="Limited Red Rock Leather - CrewMax"/>
+                <feature code="LF44" includes="Beige Leather LTD Crew Short 44" conflicts="Base Regular Double Standard Long 1D6 1G3" name="Limited Sand Beige Leather - CrewMax"/>
+                <feature code="LE13" includes="Graphite Leather LTD Crew Short 13 OF" conflicts="Base Regular Double Standard Long" name="Limited Graphite Leather Off Road - CrewMax"/>
+                <feature code="LE21" includes="Red Leather LTD Crew Short 21 OF" conflicts="Base Regular Double Standard Long 3L5 3R3" name="Limited Red Rock Leather Off Road - CrewMax"/>
+                <feature code="LE44" includes="Beige Leather LTD Crew Short 44 OF" conflicts="Base Regular Double Standard Long 1D6 1G3" name="Limited Sand Beige Leather Off Road - CrewMax"/>
+                <feature code="LG13" includes="Graphite Leather LTD Crew Short 13 PT" conflicts="Base Regular Double Standard Long 040 3L5 4T3 6V4 8S6" name="Limited Graphite Leather Platinum - CrewMax"/>
+                <feature code="LG20" includes="Black Leather LTD Crew Short 20 PT" conflicts="Base Regular Double Standard Long 040 3L5 4T3 6V4 8S6" name="Limited Black Leather Platinum - CrewMax"/>
+                <feature code="LG21" includes="Red Leather LTD Crew Short 21 PT" conflicts="Base Regular Double Standard Long 040 3L5 4T3 6V4 3R3 8S6" name="Limited Red Rock Leather Platinum - CrewMax"/>
+                -->
+            </interior>
+            <iColor pick="1">
+                <feature code="Graphite" iffs="13" name="Graphite"/>
+                <feature code="Beige" iffs="44" conflicts="Vinyl" name="Sand Beige"/>
+                <feature code="Black" iffs="20" conflicts="Vinyl" name="Black"/>
+                <feature code="Red" iffs="21" includes="Leather" conflicts="Base Fabric Vinyl" name="Red Rock"/>
+            </iColor>
+            <iFabric pick="1">
+                <feature code="Fabric" includes="Base" conflicts="LTD Red 21"/>
+                <feature code="Vinyl" includes="Base Graphite Work" conflicts="LTD Beige Red Black 20 21 44"/>
+                <feature code="Leather" includes="LTD" conflicts="Base"/>
+            </iFabric>
+        </color>
+        <options>
+            <!-- standard (not actually options) -->
+            <feature code="LayerPad1" name="Folder padding for layer control" includes="" derived="true"/>
+            <feature code="LayerPad2" name="Folder padding for layer control" includes="" derived="true"/>
+
+            <feature code="13" iffs="Graphite" conflicts="20 21 44 Black Red Beige" derived="true"/>
+            <feature code="20" iffs="Black" conflicts="13 21 44 Graphite Red Beige" derived="true"/>
+            <feature code="21" iffs="Red" conflicts="Base Fabric 13 20 44 Graphite Black Beige" derived="true"/>
+            <feature code="44" iifs="Beige" conflicts="13 20 21 Graphite Black Red" derived="true"/>
+
+            <feature code="TGDown" name="Tailgate Down" derived="true"/>
+            <feature code="ColorPaint" name="Colored Paint" derived="true"/>
+            <feature code="SportFabric" name="SR5 Fabric" includes="Base Fabric" conflicts="LTD Vinyl Leather" derived="true"/>
+
+
+            <!-- options - Derived -->
+            <feature code="iForce" name="iForce Engine" conflicts="V6 V8" derived="true"/>
+            <feature code="SR5" name="SR5 Package" includes="Base SportFabric" conflicts="LTD TRD Vinyl" derived="true"/>
+            <feature code="Work" name="Work Package" includes="Vinyl" conflicts="LTD" derived="true"/>
+            <feature code="Bucket" name="Front Bucket Seats" includes="" conflicts="" derived="true"/>
+            <feature code="Fog" name="Fog Lamps" includes="" conflicts="" derived="true"/>
+            <!--<feature code="Cruise" name="Cruise Control" includes="" conflicts="" derived="true"/>-->
+            <feature code="SlideWin" name="Sliding Rear Window" includes="" conflicts="" derived="true"/>
+            <feature code="CKPkg" name="Color-keyed bumpers and grille surround" includes="" conflicts="Vinyl" derived="true"/>
+            <feature code="SAT" name="Satellite Radio" includes="" conflicts="" derived="true"/>
+            <feature code="TowHooks" name="FrontTow Hooks" includes="" conflicts="V6" derived="true"/>
+            <feature code="TRD" name="TRD Package" includes="SportFabric" conflicts="SR5 Vinyl" derived="true"/>
+            <feature code="BedRug" name="Bed Rug" includes="" conflicts="CJ BL LU" derived="true"/>
+            <feature code="Overhead" name="Overhead Console" includes="" conflicts="" derived="true"/>
+            <feature code="HomeLink" name="HomeLink Rearview Mirror" includes="" conflicts="" derived="true"/>
+
+
+            <!-- options - User Pickable -->
+            <feature code="ST" name="18-in. styled steel wheels" includes="Base" conflicts="LTD AA AL OF RD RK SS PT"/>
+            <feature code="AA" name="18-in. alloy wheels" includes="Base" conflicts="V6 LTD AL ST OF RD RK SS BX BZ PT"/>
+            <feature code="AL" name="20-in. alloy wheels" includes="LTD" conflicts="Base AA ST OF RD RK SS PT"/>
+            <feature code="KG" name="Running boards-black" includes="" conflicts="Regular Long V6 R2 R3 RB"/>
+            <!--<feature code="RL" name="Daytime running lights"/>-->
+            <feature code="SR" name="Power tilt/slide moonroof with sunshade" includes="Crew" conflicts="Regular Double"/>
+            <!--<feature code="7J" name="Front license plate bracket" conflicts=""/>-->
+            <feature code="DS" name="Deck rail system" includes="" conflicts=""/>
+            <feature code="MG" name="Mudguards, front and rear-black"/>
+            <feature code="WR" name="Sliding rear window w/ privacy glass" includes="Base SlideWin" conflicts="LTD Crew WX"/>
+            <feature code="WX" name="Power sliding rear window" includes="Double SlideWin" conflicts="Regular Crew WR"/>
+            <feature code="MN" name="Back-up monitor in rear view mirror" conflicts="BX BZ EC NV"/>
+            <feature code="EC" name="Auto-dimming rearview mirror with HomeLink" includes="Base HomeLink" conflicts="LTD BX BZ MN"/>
+            <!--<feature code="EY" name="Rear-seat DVD entertainment system" includes="Crew EJ" conflicts="Regular Double EV NV"/>-->
+            <feature code="BN" name="Cloth bucket 4-way manual seats" includes="Base Bucket Overhead" conflicts="LTD BX BZ PE RK SM OF SP"/>
+            <feature code="PE" name="Cloth bucket 8-way power seats" includes="Base Bucket Overhead" conflicts="LTD Regular Long BX BZ BN RK SM"/>
+            <!--<feature code="EM" name="Outside mirrors-power, black" includes="Regular" conflicts="Double Crew HM TM MM"/>-->
+            <!--<feature code="HM" name="Outside mirrors-power, heated, black" conflicts="EM TM MM"/>-->
+            <!--<feature code="MM" name="Manually operated mirror" includes="Base Double" conflicts="LTD Regular Crew EM HM TM CK OF RD SM SP"/>-->
+            <feature code="TM" name="Towing mirrors" includes="" conflicts="V6 V8 MO"/>
+            <!--<feature code="LF" name="Fog Lamps" includes="Base Fog" conflicts="LTD V6 Long"/>-->
+            <feature code="SO" name="Front and rear clearance sonar" conflicts="V6"/>
+            <!--<feature code="PN" name="Anti-theft alarm system" conflicts="V6"/>-->
+            <!--<feature code="UT" name="Rear under-seat storage box" includes="Base Double" conflicts="LTD Regular Crew EJ"/>-->
+
+            <!--<feature code="RE" name="Federal emissions"/>-->
+            <!--<feature code="FE" name="50 state emissions"/>-->
+
+            <feature code="MO" name="Memory Package" includes="LTD" conflicts="Base TM"/>
+            <!--<feature code="MP" name="Maximum payload package" includes="" conflicts=""/>-->
+            <feature code="TO" name="Tow Package" includes="" conflicts="V6"/>
+            <feature code="CK" name="Cold Weather Package" includes="Base MG" conflicts="LTD TM"/>
+            <feature code="BX" name="Work Truck Package w/Cruise Control" includes="Work" conflicts="LTD Crew 44 Beige BZ EC EV EJ NV MN SL SO OF PE RK SM SP WX"/>
+            <feature code="BZ" name="Work Truck Package" includes="Work" conflicts="LTD Crew 44 Beige BX EC EV EJ NV MN SL SO OF PE RK SM SP WX"/>
+            <feature code="SL" name="SR5 Package" includes="Base Regular SR5" conflicts="Double Crew BN BX BZ OF RD RK SM SP"/>
+            <feature code="SP" name="SR5 Towing Package" includes="Base TO SR5" conflicts="Regular Long LTD BN BX BZ DZ OF RD RK SM SL"/>
+            <feature code="SM" name="SR5 Color-keyed Bumper Package" includes="Base SR5 Fog SlideWin CKPkg Overhead" conflicts="LTD Crew Long V6 20 Black 44 Beige 1D6 3R3 4T3 6V4 8S6 TM BX BZ OF PE SP SL RD"/>
+            <feature code="PT" name="Platinum Package" includes="Crew LTD NV MO SR" conflicts="Base Regular Double AA AL ST RD RK OF SS 040 3L5 4T3 6V4 8S6"/>
+            <feature code="RD" name="TRD Sport Package" includes="Base Double Standard V8Big 2WD SS Fog SlideWin CKPkg TRD Overhead" conflicts="LTD Regular Crew Long 4WD V6 V8 V8FFV AA AL ST OF RK PT BN BX BZ OF PE SM SP TM TO 040 1D6 1G3 3R3 4T3 6V4 8S6"/>
+            <feature code="OF" name="TRD Off-Road Package" includes="TO Fog CK SlideWin TRD TowHooks" conflicts="V6 Long BN BX BZ DZ SM SP SL RD RK PT AA AL ST SS"/>
+            <feature code="RK" name="TRD Rock Warrior Package" includes="Base 4WD Fog SlideWin Bucket TRD" conflicts="LTD Regular Long 2WD V6 V8 AA AL ST SS BN PE BX BZ OF SL SM SP RD PT 1D6 3R3 4T3 6V4 8S6"/>
+
+            <feature code="DZ" name="AM/FM/MP3 CD player" includes="Base" conflicts="LTD Regular V6 EV EJ NV OF SM SP"/>
+            <feature code="EV" name="AM/FM/MP3 CD player w/satellite radio" includes="Base SAT" conflicts="LTD DZ EJ NV"/>
+            <feature code="EJ" name="JBL AM/FM/MP3 6-disc CD w/satellite radio" includes="Base SAT" conflicts="LTD Regular V6 DZ EV NV BX BZ"/>
+            <feature code="NV" name="DVD navigation system" includes="" conflicts="V6 DZ EV EJ BX BZ MN"/>
+
+
+        </options>
+        <accessories>
+            <!--<feature code="HP" name="Hood protector"/>-->
+            <!--<feature code="WI" name="Spare tire lock"/>-->
+            <!--<feature code="WL" name="Wheel locks (alloy)"/>-->
+            <feature code="7T" name="Bed extender" includes="TGDown"/>
+            <feature code="BK" name="Locking bike fork attachment" includes="TGDown"/>
+            <feature code="BL" name="Bedliner with deck rails" includes="TGDown" conflicts="DI02 DI03 DI04 CJ LU"/>
+            <feature code="LU" name="Bedliner without deck rails" includes="TGDown" conflicts="DI02 DI03 DI04 CJ BL"/>
+            <feature code="R9" name="Deck rail system with 4 tie down cleats" includes="TGDown DS"/>
+            <!--<feature code="BT" name="Tonneau cover"/>-->
+            <feature code="CJ" name="Bed mat" includes="TGDown" conflicts="DI02 DI03 DI04 BL LU"/>
+            <feature code="D2" name="Cargo divider" includes="TGDown"/>
+            <feature code="DH" name="Tow hitch with 7 pin connector" includes="TO"/>
+            <!--<feature code="GN" name="Cargo Net" includes="TGDown"/>-->
+            <feature code="R2" name="Tube steps - black" conflicts="R3 RB KG"/>
+            <feature code="R3" name="Tube steps - chrome" conflicts="R2 RB KG"/>
+            <feature code="RB" name="Brushed Stainless-steel Step Boards" conflicts="R2 R3 KG"/>
+            <!--<feature code="RT" name="Mini tie down with hook (set of 2)" includes="TGDown"/>-->
+            <feature code="S0" name="Front skid plate"/>
+            <!--<feature code="8Q" name="Bed step"/>-->
+            <feature code="E5" name="Exhaust Tip"/>
+            <feature code="DI" name="Towing hitch receiver hitch" conflicts=""/>
+            <feature code="DI01" name="Ball mounts"/>
+            <feature code="DI02" name="Bed Rug - Short" includes="TGDown Short BedRug" conflicts="Standard Long DI03 DI04 CJ BL LU"/>
+            <feature code="DI03" name="Bed Rug - Std" includes="TGDown Standard BedRug" conflicts="Short Long DI02 DI04 CJ BL LU"/>
+            <feature code="DI04" name="Bed Rug - Long" includes="TGDown Long BedRug" conflicts="Short Standard DI02 DI03 CJ BL LU"/>
+            <!--<feature code="3P" name="Paint protection film"/>-->
+
+            <!--<feature code="3Z" name="First aid kit"/>-->
+            <!--<feature code="7R" name="Emergency assistance kit"/>-->
+            <!--<feature code="C4" name="Carpet floor mats" conflicts="CF"/>-->
+            <!--<feature code="CF" name="Carpet floor mats with door sill protector" conflicts="C4 CT"/>-->
+            <!--<feature code="CT" name="Door Sill protector" conflicts="CF"/>-->
+            <!--<feature code="G3" name="Seat back cargo net"/>-->
+            <!--<feature code="G7" name="Underseat storage"/>-->
+            <!--<feature code="V2" name="Glass breakage sensor"/>-->
+            <!--<feature code="V4" name="Remote engine start"/>-->
+            <!--<feature code="V5" name="VIP-RS3000 plus security system"/>-->
+            <!--<feature code="WH" name="Wireless headphones"/>-->
+            <!--<feature code="2Q" name="All weather mats"/>-->
+            <!--<feature code="32" name="Sport pedals by Obx Racing Sports"/>-->
+            <!--<feature code="8E" name="Molded simulated Burlwood dash applique by Superior Dash"/>-->
+            <!--<feature code="WB" name="20-in. machined star 5 spoke wheel"/>-->
+            <!--<feature code="28" name="Anodized aluminum shift knob"/>-->
+            <!--<feature code="P5" name="Interface kit for iPod"/>-->
+            <!--<feature code="P7" name="XM satellite radio" includes="SAT"/>-->
+            <!--<feature code="B3" name="BLU Logic Hands-free System"/>-->
+            <feature code="SS" name="20-in. Alloy Sport Wheel" conflicts="AA AL ST RK PT"/>
+
+            <!--<feature code="L2" name="TRD 17-in. 6 split spoke forged Off-Road wheel with beadlock styling"/>-->
+            <!--<feature code="L7" name="TRD 22-in. 5-spoke polished forged aluminum alloy wheel"/>-->
+
+        </accessories>
+    </features>
+
+</model>
+
+
+
+
+
